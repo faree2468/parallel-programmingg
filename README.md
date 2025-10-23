@@ -40,4 +40,4 @@ Google spreadsheet link:
 https://docs.google.com/spreadsheets/d/1f5XVMrMRfbBWUfzhxZ8kMPe1C5ggji32JIkr9uaHCog/edit?gid=0#gid=0
 
 ## Graph created
-[graph](https://github.com/faree2467/parallel-programmingg/blob/assignment3/assets/graph.png?raw=true)
+![graph](https://github.com/faree2468/parallel-programmingg/blob/assignment3/assets/graph.png)
