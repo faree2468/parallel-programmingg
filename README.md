@@ -26,3 +26,39 @@ timestep_opt3.c:
 It has the same pragma as the 1st one however the difference is that the variables are declared inside the loop which means, by C rules that they have automatic
 storage duration, each loop iteration already gets its own copy
 
+```bash
+make # before putting the -fno-trapping-math -fno-math-errno
+```
+
+![terminal](https://github.com/faree2468/parallel-programmingg/blob/assignment-5/assets/terminal.png)
+
+
+```bash
+./stream_triad
+```
+
+![terminal2](https://github.com/faree2468/parallel-programmingg/blob/assignment-5/assets/terminal2.png)
+
+
+
+```bash
+likwid-perfctr -C 0 -g FLOPS_DP ./stream_triad
+```
+
+We can see from the results that the code was indeed vectorized
+```bash
+RETIRED_SSE_AVX_FLOPS_ALL 320000006
+```
+320 milion FLOPS via SSE or AVX however the kernel achieved 1.2 GFLOPS/s (1196 MFLOPS/s) on a single core
+Theoretical max is 64 GFLOPS/s which makes this memory bound
+
+![terminal3](https://github.com/faree2468/parallel-programmingg/blob/assignment-5/assets/terminal3.png)
+
+
+
+```bash
+make # after putting -fno-trapping-math -fno-math-errno
+```
+
+![terminal4](https://github.com/faree2468/parallel-programmingg/blob/assignment-5/assets/terminal4.png)
+
