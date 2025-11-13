@@ -1,0 +1,3 @@
+stencil_opt2.c: Timing is init 0.009391 flush 41.900788 stencil 37.327483 total 79.238738
+stencil_opt4.c: Timing is init 0.009841 flush 40.253234 stencil 36.713934 total 76.993951
+stencil_opt6.c: Timing is init 0.011990 flush 39.317590 stencil 36.909271 total 77.559502
