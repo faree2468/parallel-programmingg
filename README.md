@@ -19,9 +19,12 @@ Results for ```stencil_opt4.c```:
 And lastly I've done the same thing for the ```stencil_opt6.c```:
 ![terminal3](https://github.com/faree2468/parallel-programmingg/blob/assignment-6/assets/w7a63.png)
 
-My CPU used 12 threads to execute the code
-In the first stencil, it is Loop Level OpenMP however there are issues because it recreates OpenMP on every iteration, too many implicit barriers as well
-In the second stencil, it is still Loop Level OpenMP however it's much better because it avoids thousands of implicit barriers, reuses parallel regions
+My CPU used 12 threads to execute the code.
+
+In the first stencil, it is Loop Level OpenMP however there are issues because it recreates OpenMP on every iteration, too many implicit barriers as well.
+
+In the second stencil, it is still Loop Level OpenMP however it's much better because it avoids thousands of implicit barriers, reuses parallel regions.
+
 We use things like:
 ```c
 #pragma omp parallel // all iterations happen under this pragma
@@ -47,5 +50,7 @@ It uses explicit barriers
 
 
 Implicit barrier means that all threads must reach certain point before any thread can continue
+
+
 Explicit barrier forces all threads to synchronize where the pragma is written
 
