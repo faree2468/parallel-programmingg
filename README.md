@@ -49,3 +49,20 @@ Reduce is used here to collect all the partial sums, combines them with MPI_SUM 
 
 Rank 0 only needs to deallocate resources because it's the only process that allocated global array. Other processes never allocated it and only work with their local ones.
 
+2 MPI processes:
+
+![terminal1](https://github.com/faree2468/parallel-programmingg/blob/assignment-7/assets/a7-2.png)
+
+
+4 MPI processes:
+
+![terminal2](https://github.com/faree2468/parallel-programmingg/blob/assignment-7/assets/a7-1.png)
+
+
+8 MPI processes (before without --oversubscribe flag):
+![terminal3](https://github.com/faree2468/parallel-programmingg/blob/assignment-7/assets/a7-3.png)
+
+
+8 MPI processes:
+![terminal4](https://github.com/faree2468/parallel-programmingg/blob/assignment-7/assets/a7-4.png)
+
