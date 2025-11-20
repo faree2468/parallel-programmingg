@@ -45,3 +45,7 @@ MPI_Reduce(&local_sum, &total_sum, 1, MPI_DOUBLE, MPI_SUM, 0, comm);
 ```
 
 Reduce is used here to collect all the partial sums, combines them with MPI_SUM function and stores the final result on rank 0
+
+
+Rank 0 only needs to deallocate resources because it's the only process that allocated global array. Other processes never allocated it and only work with their local ones.
+
