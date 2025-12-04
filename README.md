@@ -42,3 +42,23 @@ These are OpenMP results which are 10-15x slower than GPU because they run on th
 -CUDA/OpenCL run tens of thousands of threads, hiding memory latency, OpenMP runs only 8-12 CPU threads limited by CPU cores
 
 -GPUs are optimized for throughput
+
+![labssh](https://github.com/faree2468/parallel-programmingg/blob/assignment-8/assets/sc.jpg)
+
+Running CUDA on RTX 2060 SUPER
+
+-There are 136 blocks and 1024 threads per block meaning it's 136x1024 = 139,264 threads
+
+Stream Kernel functions compared to my regular RTX 2060 run faster 
+
+Function    MBytes/sec  Min (sec)   Max         Average
+
+Copy        396048.092  0.00136     0.00136     0.00136
+
+Mul         394229.292  0.00136     0.00136     0.00136
+
+Add         403921.092  0.00199     0.00200     0.00199
+
+Triad       403978.638  0.00199     0.00200     0.00199
+
+Dot         419473.986  0.00128     0.00130     0.00129
