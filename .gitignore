@@ -1,0 +1,4 @@
+cuda/*.o
+ocl/*.o
+omp/*.o
+openacc/*.o

@@ -1,0 +1,17 @@
+const char *StreamTriad_kernel_source =
+"// OpenCL kernel version of stream triad\n"
+"__kernel void StreamTriad(\n"
+"               const int n,\n"
+"               const double scalar,\n"
+"      __global const double *a,\n"
+"      __global const double *b,\n"
+"      __global       double *c)\n"
+"{\n"
+"   int i = get_global_id(0);\n"
+"\n"
+"   // Protect from going out-of-bounds\n"
+"   if (i >= n) return;\n"
+"\n"
+"   c[i] = a[i] + scalar*b[i];\n"
+"}\n"
+;
