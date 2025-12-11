@@ -24,7 +24,7 @@ Data transfer time is pretty much the same
 
 ![openaccw11](https://github.com/faree2468/parallel-programmingg/blob/assignment-9/assets/openaccweek11.png)
 
-OpenACC is much slower because it's a high level model, unlike CUDA/OpenCL you are not the one who manages memory transfers.
+In OpenACC, you are not the one who manages memory transfers.
 
 OpenACC automatically does it between the host and GPU when entering and exiting the accelerated region
 
