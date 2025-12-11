@@ -1,8 +1,8 @@
 default:	StreamTriad StreamTriad_par1 StreamTriad_par2
 all:	StreamTriad StreamTriad_par1 StreamTriad_par2
 
-CFLAGS:=-qthreaded -g -O3 -std=gnu99 -fstrict-aliasing \
-	-fopenmp -foffload=nvptx-none -foffload=-lm -fopt-info-omp
+CFLAGS:= -g -O3 -std=gnu99 -fstrict-aliasing \
+	-fopenmp -fopt-info-omp
 
 %.o: %.c
 	${CC} ${CFLAGS} -c $^
